@@ -14,16 +14,16 @@ public class BeachController {
 	@Autowired
 	private BeachDao beachDao;
 
-//	@RequestMapping(path={"/","index.do"})
-//	public String index(Model model) {
-//	model.addAttribute("beaches", beachDao.findAll());
-////  return "WEB-INF/index.jsp";
-//   return "index"; // if using a ViewResolver.
-//}
+	@RequestMapping(path={"/","index.do"})
+	public String index(Model model) {
+	model.addAttribute("beaches", beachDao.listAll());
+//  return "WEB-INF/index.jsp";
+   return "index"; // if using a ViewResolver.
+}
 
 	@RequestMapping(path = "getBeach.do")
-	public String getBeach(Integer fid, Model model) {
-		Beach beach = beachDao.findById(fid);
+	public String getBeach(Integer bid, Model model) {
+		Beach beach = beachDao.findById(bid);
 		model.addAttribute("beach", beach);
 		return "beach/show";
 	}
