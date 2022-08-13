@@ -14,76 +14,72 @@ public class Beach {
 	private int id;
 
 	private String name;
-	
+
 	private String description;
-	
-	private int rating;
-	
-	@Column(name="sand_color")
+
+	private Integer rating;
+
+	@Column(name = "sand_color")
 	private String sandColor;
-	
-	@Column(name="closest_city")
+
+	@Column(name = "closest_city")
 	private String closestCity;
-	
-	@Column(name="considered_tropical")
-	private boolean consideredTropical;
-	
-	@Column(name="average_home_price")
-	private double avgHomePrice;
-	
-	@Column(name="miles_to_closest_city")
-	private int milesToClosestCity;
-	
-	@Column(name="population_closest_city")
-	private int populationOfClosestCity;
-	
-	@Column(name="highest_temperature")
-	private int highestTemp;
-	
-	@Column(name="lowest_temperature")
-	private int lowestTemp;
-	
-	@Column(name="government_type")
+
+	@Column(name = "considered_tropical")
+	private Boolean consideredTropical;
+
+	@Column(name = "average_home_price")
+	private Double avgHomePrice;
+
+	@Column(name = "miles_to_closest_city")
+	private Integer milesToClosestCity;
+
+	@Column(name = "population_closest_city")
+	private Integer populationOfClosestCity;
+
+	@Column(name = "highest_temperature")
+	private Double highestTemp;
+
+	@Column(name = "lowest_temperature")
+	private Double lowestTemp;
+
+	@Column(name = "government_type")
 	private String typeOfGovernment;
-	
-	@Column(name="image_url")
+
+	@Column(name = "image_url")
 	private String image;
-	
-	@Column(name="temperature_average_fall")
-	private double avgFallTemp;
-	
-	@Column(name="temperature_average_winter")
-	private double avgWinterTemp;
-	
-	@Column(name="temperature_average_spring")
-	private double avgSpringTemp;
-	
-	@Column(name="temperature_average_summer")
-	private double avgSummerTemp;
-	
+
+	@Column(name = "temperature_average_fall")
+	private Double avgFallTemp;
+
+	@Column(name = "temperature_average_winter")
+	private Double avgWinterTemp;
+
+	@Column(name = "temperature_average_spring")
+	private Double avgSpringTemp;
+
+	@Column(name = "temperature_average_summer")
+	private Double avgSummerTemp;
+
 //	@Column(name="date_created")
 //	private DateTime dateCreated;
 //	
 //	@Column(name="last_updated")
 //	private DateTime lastUpdated;
 //	
-	@Column(name="area_id")
+	@Column(name = "area_id")
 	private String region;
-	
 
 	public Beach() {
 	}
-	
-	
 
-	public Beach(String name, String description, int rating, String region) {
+	public Beach(int id, String name, String description, Integer rating) {
+		super();
+		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.rating = rating;
-		this.region = region;
 	}
-
-
 
 	public int getId() {
 		return id;
@@ -105,210 +101,144 @@ public class Beach {
 		return description;
 	}
 
-
-
 	public void setDescription(String description) {
 		this.description = description;
 	}
 
-
-
-	public int getRating() {
+	public Integer getRating() {
 		return rating;
 	}
 
-
-
-	public void setRating(int rating) {
+	public void setRating(Integer rating) {
 		this.rating = rating;
 	}
-
-
 
 	public String getSandColor() {
 		return sandColor;
 	}
 
-
-
 	public void setSandColor(String sandColor) {
 		this.sandColor = sandColor;
 	}
-
-
 
 	public String getClosestCity() {
 		return closestCity;
 	}
 
-
-
 	public void setClosestCity(String closestCity) {
 		this.closestCity = closestCity;
 	}
 
-
-
-	public boolean isConsideredTropical() {
+	public Boolean getConsideredTropical() {
 		return consideredTropical;
 	}
 
-
-
-	public void setConsideredTropical(boolean consideredTropical) {
+	public void setConsideredTropical(Boolean consideredTropical) {
 		this.consideredTropical = consideredTropical;
 	}
 
-
-
-	public double getAvgHomePrice() {
+	public Double getAvgHomePrice() {
 		return avgHomePrice;
 	}
 
-
-
-	public void setAvgHomePrice(double avgHomePrice) {
+	public void setAvgHomePrice(Double avgHomePrice) {
 		this.avgHomePrice = avgHomePrice;
 	}
 
-
-
-	public int getMilesToClosestCity() {
+	public Integer getMilesToClosestCity() {
 		return milesToClosestCity;
 	}
 
-
-
-	public void setMilesToClosestCity(int milesToClosestCity) {
+	public void setMilesToClosestCity(Integer milesToClosestCity) {
 		this.milesToClosestCity = milesToClosestCity;
 	}
 
-
-
-	public int getPopulationOfClosestCity() {
+	public Integer getPopulationOfClosestCity() {
 		return populationOfClosestCity;
 	}
 
-
-
-	public void setPopulationOfClosestCity(int populationOfClosestCity) {
+	public void setPopulationOfClosestCity(Integer populationOfClosestCity) {
 		this.populationOfClosestCity = populationOfClosestCity;
 	}
 
-
-
-	public int getHighestTemp() {
+	public Double getHighestTemp() {
 		return highestTemp;
 	}
 
-
-
-	public void setHighestTemp(int highestTemp) {
+	public void setHighestTemp(Double highestTemp) {
 		this.highestTemp = highestTemp;
 	}
 
-
-
-	public int getLowestTemp() {
+	public Double getLowestTemp() {
 		return lowestTemp;
 	}
 
-
-
-	public void setLowestTemp(int lowestTemp) {
+	public void setLowestTemp(Double lowestTemp) {
 		this.lowestTemp = lowestTemp;
 	}
-
-
 
 	public String getTypeOfGovernment() {
 		return typeOfGovernment;
 	}
 
-
-
 	public void setTypeOfGovernment(String typeOfGovernment) {
 		this.typeOfGovernment = typeOfGovernment;
 	}
-
-
 
 	public String getImage() {
 		return image;
 	}
 
-
-
 	public void setImage(String image) {
 		this.image = image;
 	}
 
-
-
-	public double getAvgFallTemp() {
+	public Double getAvgFallTemp() {
 		return avgFallTemp;
 	}
 
-
-
-	public void setAvgFallTemp(double avgFallTemp) {
+	public void setAvgFallTemp(Double avgFallTemp) {
 		this.avgFallTemp = avgFallTemp;
 	}
 
-
-
-	public double getAvgWinterTemp() {
+	public Double getAvgWinterTemp() {
 		return avgWinterTemp;
 	}
 
-
-
-	public void setAvgWinterTemp(double avgWinterTemp) {
+	public void setAvgWinterTemp(Double avgWinterTemp) {
 		this.avgWinterTemp = avgWinterTemp;
 	}
 
-
-
-	public double getAvgSpringTemp() {
+	public Double getAvgSpringTemp() {
 		return avgSpringTemp;
 	}
 
-
-
-	public void setAvgSpringTemp(double avgSpringTemp) {
+	public void setAvgSpringTemp(Double avgSpringTemp) {
 		this.avgSpringTemp = avgSpringTemp;
 	}
 
-
-
-	public double getAvgSummerTemp() {
+	public Double getAvgSummerTemp() {
 		return avgSummerTemp;
 	}
 
-
-
-	public void setAvgSummerTemp(double avgSummerTemp) {
+	public void setAvgSummerTemp(Double avgSummerTemp) {
 		this.avgSummerTemp = avgSummerTemp;
 	}
-
-
 
 	public String getRegion() {
 		return region;
 	}
 
-
-
 	public void setRegion(String region) {
 		this.region = region;
 	}
 
-
-
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Beach [name=");
+		builder.append("Beach [id=");
+		builder.append(id);
+		builder.append(", name=");
 		builder.append(name);
 		builder.append(", description=");
 		builder.append(description);
@@ -318,6 +248,30 @@ public class Beach {
 		builder.append(sandColor);
 		builder.append(", closestCity=");
 		builder.append(closestCity);
+		builder.append(", consideredTropical=");
+		builder.append(consideredTropical);
+		builder.append(", avgHomePrice=");
+		builder.append(avgHomePrice);
+		builder.append(", milesToClosestCity=");
+		builder.append(milesToClosestCity);
+		builder.append(", populationOfClosestCity=");
+		builder.append(populationOfClosestCity);
+		builder.append(", highestTemp=");
+		builder.append(highestTemp);
+		builder.append(", lowestTemp=");
+		builder.append(lowestTemp);
+		builder.append(", typeOfGovernment=");
+		builder.append(typeOfGovernment);
+		builder.append(", image=");
+		builder.append(image);
+		builder.append(", avgFallTemp=");
+		builder.append(avgFallTemp);
+		builder.append(", avgWinterTemp=");
+		builder.append(avgWinterTemp);
+		builder.append(", avgSpringTemp=");
+		builder.append(avgSpringTemp);
+		builder.append(", avgSummerTemp=");
+		builder.append(avgSummerTemp);
 		builder.append(", region=");
 		builder.append(region);
 		builder.append("]");
@@ -325,10 +279,4 @@ public class Beach {
 	}
 
 	
-
-
-	
-
-
-
 }

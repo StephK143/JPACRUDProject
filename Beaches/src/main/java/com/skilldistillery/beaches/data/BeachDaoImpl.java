@@ -29,9 +29,9 @@ public class BeachDaoImpl implements BeachDao {
 	}
 
 	@Override
-	public Beach addBeach() {
-		// TODO Auto-generated method stub
-		return null;
+	public Beach addBeach(Beach beach) {
+		em.persist(beach);
+		return beach;
 	}
 
 	@Override
