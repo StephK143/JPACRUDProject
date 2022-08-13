@@ -5,26 +5,26 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.skilldistillery.beaches.data.BeachDao;
+import com.skilldistillery.beaches.entities.Beach;
+
+@Controller
 public class BeachController {
 
-	@Controller
-	public class FilmController {
-		
-		@Autowired
-		private BeachDAO beachDao;
-		
-		@RequestMapping(path={"/","index.do"})
-		public String index(Model model) {
-			model.addAttribute("beach", beachDao.findAll());
-//		  return "WEB-INF/index.jsp";
-		   return "index"; // if using a ViewResolver.
-		}
-		
-		@RequestMapping(path = "getBeach.do")
-		public String getBeach(Integer fid, Model model) {
-			Beach beach = beachDao.findById(fid);
-			model.addAttribute("beach", beach;
-			return "index";
-		}
-		
+	@Autowired
+	private BeachDao beachDao;
+
+//	@RequestMapping(path={"/","index.do"})
+//	public String index(Model model) {
+//	model.addAttribute("beaches", beachDao.findAll());
+////  return "WEB-INF/index.jsp";
+//   return "index"; // if using a ViewResolver.
+//}
+
+	@RequestMapping(path = "getBeach.do")
+	public String getBeach(Integer fid, Model model) {
+		Beach beach = beachDao.findById(fid);
+		model.addAttribute("beach", beach);
+		return "beach/show";
+	}
 }
