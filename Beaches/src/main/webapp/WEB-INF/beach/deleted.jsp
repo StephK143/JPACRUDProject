@@ -6,16 +6,16 @@
 <head>
 <meta charset="UTF-8">
 <title>Best Beaches!</title>
-<jsp:include page="bootstrapHead.jsp" />
+<jsp:include page="../bootstrapHead.jsp" />
 </head>
 
 <body>
 
-	<jsp:include page="navbar.jsp" />
+	<jsp:include page="../navbar.jsp" />
 
 	<main class="container-fluid">
 
-		<h1>Best beaches to live near!</h1>
+		<h1>Beach Deleted Successfully!</h1>
 
 		<form action="getBeach.do" method="GET">
 			Beach Id: <input type="text" name="bid" /><input type="submit"
@@ -28,7 +28,7 @@
 		<table class="table table-stripe table-hover">
 			<thead>
 				<tr>
-					
+					<th>ID</th>
 					<th>Name</th>
 					<th>Description</th>
 					<th>Closest City</th>
@@ -41,7 +41,7 @@
 						<c:forEach var="b" items="${beaches }">
 
 							<tr>
-								
+								<td>${b.id }</td>
 								<td><a href="getBeach.do?bid=${b.id}">${b.name} </a></td>
 								<td>${b.description}</td>
 								<td>${b.closestCity}</td>
@@ -56,6 +56,6 @@
 
 
 	</main>
-	<jsp:include page="bootstrapFoot.jsp" />
+	<jsp:include page="../bootstrapFoot.jsp" />
 </body>
 </html>

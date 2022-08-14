@@ -5,14 +5,21 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<title>Best Beaches!</title>
 <jsp:include page="../bootstrapHead.jsp" />
-<title>${beach.name}</title>
 </head>
+
 <body>
 
 	<jsp:include page="../navbar.jsp" />
 
-	<h1>Beach Details</h1>
+	<main class="container-fluid">
+
+		<h1>Beach Updated Successfully!</h1>
+
+		
+		<a href="addBeach.do"><button type="button" value="addBeach"
+				class="btn btn-primary">Add Beach</button></a>
 
 	<div>
 	<table class="table table-stripe table-hover">
@@ -44,17 +51,8 @@
 
 	</div>
 
-	<form action="updateBeach.do" method="GET">
-		<input type="hidden" name="id" value="${beach.id}"/> <input type="submit" value="Update Beach" class="btn btn-primary" />
-	</form>
-	<br><br>
-	<form action="deleteBeach.do" method="POST">
-		<input type="hidden" name="id" value="${beach.id}"/> <input type="submit"
-			value="Delete Beach" class="btn btn-primary" />
-	</form>
 
-
-
+	</main>
 	<jsp:include page="../bootstrapFoot.jsp" />
 </body>
 </html>

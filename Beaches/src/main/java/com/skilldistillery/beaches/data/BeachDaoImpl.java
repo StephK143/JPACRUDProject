@@ -35,9 +35,34 @@ public class BeachDaoImpl implements BeachDao {
 	}
 
 	@Override
-	public Beach updateBeach() {
-		// TODO Auto-generated method stub
-		return null;
+	public Beach updateBeach(Beach beach, int id) {                                        
+			Beach b = em.find(Beach.class, id);
+			b.setName(beach.getName());
+			b.setDescription(beach.getDescription());
+			b.setRating(beach.getRating());
+			b.setSandColor(beach.getSandColor());
+			b.setClosestCity(beach.getClosestCity());
+			b.setConsideredTropical(beach.getConsideredTropical());
+			b.setAvgHomePrice(beach.getAvgHomePrice());
+			b.setMilesToClosestCity(beach.getMilesToClosestCity());
+			b.setPopulationOfClosestCity(beach.getPopulationOfClosestCity());
+			b.setHighestTemp(beach.getHighestTemp());
+			b.setLowestTemp(beach.getLowestTemp());
+			b.setTypeOfGovernment(beach.getTypeOfGovernment());
+			b.setAvgFallTemp(beach.getAvgFallTemp());
+			b.setAvgWinterTemp(beach.getAvgWinterTemp());
+			b.setAvgSpringTemp(beach.getAvgSpringTemp());
+			b.setAvgSummerTemp(beach.getAvgSummerTemp());
+			b.setRegion(beach.getRegion());
+			
+		return b;
+	}
+
+	@Override
+		public Boolean deleteBeach(Beach beach) {
+		em.remove(beach);
+		return true;
+		
 	}
 
 	@Override
@@ -58,11 +83,6 @@ public class BeachDaoImpl implements BeachDao {
 		return null;
 	}
 
-	@Override
-	public Beach deleteBeach() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
 	public Beach listBeachesByTempHighestFirst() {

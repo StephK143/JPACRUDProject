@@ -12,7 +12,7 @@
 
 	<jsp:include page="../navbar.jsp" />
 
-	<h1>Beach Details</h1>
+	<h1>Beach Successfully added!</h1>
 
 	<div>
 	<table class="table table-stripe table-hover">

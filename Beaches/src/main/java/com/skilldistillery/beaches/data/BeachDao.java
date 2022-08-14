@@ -12,9 +12,9 @@ public interface BeachDao {
 
 	Beach addBeach(Beach beach);
 
-	Beach updateBeach();
+	Beach updateBeach(Beach beach, int id);
 
-	Beach deleteBeach();
+	Boolean deleteBeach(Beach beach);
 
 	Beach findHighestAverageTemp();
 

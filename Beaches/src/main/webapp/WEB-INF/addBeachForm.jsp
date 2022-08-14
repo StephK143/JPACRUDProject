@@ -4,9 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<jsp:include page="bootstrapHead.jsp" />
 <title>Add a Beach to the database</title>
 </head>
 <body>
+
+<jsp:include page="navbar.jsp" />
 
 <main class="container-fluid">
 
@@ -20,9 +23,25 @@
 					<label for="description">Description:</label><br> 
 						<input type="text" name="description"> <br> 
 					<label for="rating">Rating on TripAdvisor:</label> <br> 
-						<input type="number" name="rating"> <br> 
-					<label for="sandColor">Color of Sand:</label> <br> 
-						<input type="text" name="sandColor" > <br> 
+						<select type="dropdown">
+							<option value="1">1</option>
+							<option value="1.5">1.5</option>
+							<option value="2">2</option>
+							<option value="2.5">2.5</option>
+							<option value="3">3</option>
+							<option value="3.5">3.5</option>
+							<option value="4">4</option>
+							<option value="4.5">4.5</option>
+							<option value="5">5</option>
+						</select>
+					<select type="dropdown" name="sandColor" id="dropdown">
+							<option value="White sand">White sand</option>
+							<option value="Black sand">Black sand</option>
+							<option value="Rocky - mostly sand">Rocky - mostly sand</option>
+							<option value="Rocky - mostly rocks">Rocky - mostly rocks</option>
+							<option value="Sharp lava fields">Sharp lava fields</option>
+							<option value="Other">Other</option>
+						</select> <br><br> 
 					<label for="closestCity">Closest City:</label> <br> 
 						<input type="text" name="closestCity" > <br>
 					<label for="consideredTropical">Is this beach considered to be tropical</label> <br> 
@@ -41,7 +60,7 @@
 					<label for="lowestTemp">Lowest recorded Temperature: </label> <br> 
 						<input type="number" name="lowestTemp"> <br> 
 					<label for="typeOfGovernment">Type of Government: </label> <br> 
-						<select name="typeOfGovernment" id="radio"> <br> 
+						<select name="typeOfGovernment" id="radio">
 							<option value="Democracy">Democracy</option>
 							<option value="Monarchy">Monarchy</option>
 							<option value="Republic">Republic</option>

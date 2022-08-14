@@ -17,7 +17,7 @@ public class Beach {
 
 	private String description;
 
-	private Integer rating;
+	private Double rating;
 
 	@Column(name = "sand_color")
 	private String sandColor;
@@ -68,18 +68,11 @@ public class Beach {
 //	private DateTime lastUpdated;
 //	
 	@Column(name = "area_id")
-	private String region;
+	private Integer region;
 
 	public Beach() {
 	}
 
-	public Beach(int id, String name, String description, Integer rating) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.description = description;
-		this.rating = rating;
-	}
 
 	public int getId() {
 		return id;
@@ -105,11 +98,11 @@ public class Beach {
 		this.description = description;
 	}
 
-	public Integer getRating() {
+	public Double getRating() {
 		return rating;
 	}
 
-	public void setRating(Integer rating) {
+	public void setRating(Double rating) {
 		this.rating = rating;
 	}
 
@@ -225,11 +218,11 @@ public class Beach {
 		this.avgSummerTemp = avgSummerTemp;
 	}
 
-	public String getRegion() {
+	public Integer getRegion() {
 		return region;
 	}
 
-	public void setRegion(String region) {
+	public void setRegion(Integer region) {
 		this.region = region;
 	}
 

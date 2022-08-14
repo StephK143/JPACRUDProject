@@ -11,20 +11,20 @@
 
 
 <body>
-<jsp:include page="navbar.jsp" />
+	<jsp:include page="navbar.jsp" />
 
-<main class="container-fluid">
+	<main class="container-fluid">
 
-<form action="getBeach.do" method="GET" name="lookupByIdForm">
-	Beach Id: <input type="text" name="bid" /><input type="submit"
-		class="btn btn-primary" value="Show Beach" />
-</form>
-
-
+		<form action="getBeach.do" method="GET">
+			Beach Id: <input type="text" name="bid" /><input type="submit"
+				class="btn btn-primary" value="Show Beach" />
+		</form>
 
 
 
-</main>
+
+
+	</main>
 </body>
 
 </html>

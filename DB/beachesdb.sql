@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `beach` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `description` TEXT(2000) NULL,
-  `rating` INT NULL,
+  `rating` DOUBLE NULL,
   `sand_color` VARCHAR(45) NULL,
   `closest_city` VARCHAR(100) NULL,
   `considered_tropical` TINYINT NULL DEFAULT 1,
