@@ -15,41 +15,109 @@
 
 	<main class="container-fluid">
 
-		<h1>Beach Updated Successfully!</h1>
+		<h1 class="prettyTitles" id="centered">Beach Updated Successfully!</h1>
 
-		
+
 		<a href="addBeach.do"><button type="button" value="addBeach"
-				class="btn btn-primary">Add Beach</button></a>
+				class="button1">Add Beach</button></a>
 
-	<div>
-	<table class="table table-stripe table-hover">
-			<thead>
-				<tr>
-					<th>ID</th>
-					<th>Name</th>
-					<th>Description</th>
-					<th>Closest City</th>
+		<div>
+			<table class="table table-stripe table-hover">
+				<thead  class="prettyTitles" >
+					<tr>
+						<th>Id</th>
+						<th>Name</th>
+						<th>Description</th>
+						<th>Rating</th>
+						<th>Sand Color</th>
+						<th>Considered Tropical</th>
+
+					</tr>
+				</thead>
+
+				<tbody>
+
+					<tr>
+						<td>${beach.id}</td>
+						<td>${beach.name }</td>
+						<td id="textwrap">${beach.description}</td>
+						<td>${beach.rating}</td>
+						<td>${beach.sandColor}</td>
+						<td>${beach.consideredTropical}</td>
+
+					</tr>
+
+				</tbody>
+
+			</table>
+
+
+		</div>
+		<div>
+			<table class="table table-stripe table-hover">
+				<thead  class="prettyTitles" >
+
+
 					<th>Average Home Price</th>
-					
-				</tr>
-			</thead>
+					<th>Closest City</th>
+					<th>Miles to ${beach.closestCity}</th>
+					<th>Population of ${beach.closestCity}</th>
+					<th>Type of government</th>
 
-			<tbody>
-				
-							<tr>
-								<td>${beach.id}</td>
-								<td>${beach.name }</td>
-								<td>${beach.description}</td>
-								<td>${beach.closestCity}</td>
-								<td>${beach.avgHomePrice}</td>
-							</tr>
+
+				</thead>
+				<tbody>
+					<tr>
+						<td>$ ${beach.avgHomePrice}</td>
+						<td>${beach.closestCity}</td>
+						<td>${beach.milesToClosestCity}</td>
+						<td>${beach.populationOfClosestCity}</td>
+						<td>${beach.typeOfGovernment}</td>
+					</tr>
+
+				</tbody>
+
+			</table>
+
+		</div>
+
+		<div>
+						<a class="prettyTitles" >Weather in ${beach.name }</a>
+			<table class="table table-stripe table-hover">
+				<thead  class="prettyTitles" >
+					<tr>
+
+						<th rowspan="2">Highest Recorded temperature</th>
+						<th rowspan="2">Lowest Recorded temperature</th>
+						<th colspan="4">Average temperature by season</th>
 						
-			</tbody>
+					</tr>
+					<tr>
+						<th>Summer</th>
+						<th>Fall</th>
+						<th>Winter</th>
+						<th>Spring</th>
+					
+					</tr>
+					
 
-		</table>
-	
 
-	</div>
+				</thead>
+				<tbody>
+					<tr>
+						<td>${beach.highestTemp}</td>
+						<td>${beach.lowestTemp}</td>
+						<td>${beach.avgSummerTemp}</td>
+						<td>${beach.avgFallTemp}</td>
+						<td>${beach.avgWinterTemp}</td>
+						<td>${beach.avgSpringTemp}</td>
+					</tr>
+
+				</tbody>
+
+			</table>
+
+		</div>
 
 
 	</main>

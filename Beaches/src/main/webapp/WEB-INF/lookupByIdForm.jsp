@@ -15,7 +15,7 @@
 
 	<main class="container-fluid">
 
-		<form action="getBeach.do" method="GET">
+		<form class="forms" action="getBeach.do" method="GET">
 			Beach Id: <input type="text" name="bid" /><input type="submit"
 				class="btn btn-primary" value="Show Beach" />
 		</form>

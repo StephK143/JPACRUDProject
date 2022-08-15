@@ -8,7 +8,7 @@
 <jsp:include page="../bootstrapHead.jsp" />
 <title>${beach.name}</title>
 </head>
-<body>
+<body id="main">
 
 	<jsp:include page="../navbar.jsp" />
 
@@ -43,15 +43,22 @@
 	
 
 	</div>
-
+	
+	<div>
+	<table>
+	<tr>
 	<form action="updateBeach.do" method="GET">
-		<input type="hidden" name="id" value="${beach.id}"/> <input type="submit" value="Update Beach" class="btn btn-primary" />
+		<input type="hidden" name="id" value="${beach.id}"/> <input type="submit"  value="Update Beach" class="button1" />
 	</form>
-	<br><br>
+	
 	<form action="deleteBeach.do" method="POST">
 		<input type="hidden" name="id" value="${beach.id}"/> <input type="submit"
-			value="Delete Beach" class="btn btn-primary" />
+			value="Delete Beach" class="button1" />
 	</form>
+	
+	</tr>
+	</table>
+	</div>
 
 
 

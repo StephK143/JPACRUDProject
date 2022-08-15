@@ -33,7 +33,7 @@
 							<option value="4">4</option>
 							<option value="4.5">4.5</option>
 							<option value="5">5</option>
-						</select>
+						</select> <br>
 					<select type="dropdown" name="sandColor" id="dropdown">
 							<option value="White sand">White sand</option>
 							<option value="Black sand">Black sand</option>
@@ -45,12 +45,12 @@
 					<label for="closestCity">Closest City:</label> <br> 
 						<input type="text" name="closestCity" > <br>
 					<label for="consideredTropical">Is this beach considered to be tropical</label> <br> 
-						<select name="consideredTropical" id="dropdown"> 
+						<select type="dropdown" name="consideredTropical" id="dropdown"> 
 							<option value="true">Yes</option>
 							<option value="false">No</option>
 						</select> <br><br>
 					<label for="avgHomePrice">Average Home Price:</label> <br> 
-						<input type="number" name="avgHomePrice"><br> <br> 
+						<input type="number" pattern="[0-9]*" class="dollars" name="avgHomePrice"><br> <br> 
 					<label for="milesToClosestCity">Miles to the closest city:</label><br>
 						<input type="number" name="milesToClosestCity"/> <br> 
 					<label for="populationOfClosestCity">Population of the closest city:</label><br> 
@@ -60,7 +60,7 @@
 					<label for="lowestTemp">Lowest recorded Temperature: </label> <br> 
 						<input type="number" name="lowestTemp"> <br> 
 					<label for="typeOfGovernment">Type of Government: </label> <br> 
-						<select name="typeOfGovernment" id="radio">
+						<select type="dropdown" name="typeOfGovernment" id="radio">
 							<option value="Democracy">Democracy</option>
 							<option value="Monarchy">Monarchy</option>
 							<option value="Republic">Republic</option>
@@ -77,13 +77,14 @@
 					<label for="avgSummerTemp">Average Temperature in the summer:</label> <br> 
 						<input type="number" name="avgSummerTemp"><br> <br> 
 					<label for="region">Region:</label>
-						<select name="region" id="dropdown">
+						<select type="dropdown" name="region" id="dropdown">
 							<option value="1">North America</option>
 							<option value="2">South America</option>
-							<option value="3">Europe</option>
-							<option value="4">Africa</option>
-							<option value="5">Asia</option>
-							<option value="6">Australia</option>
+							<option value="3">Central America</option>
+							<option value="4">Europe</option>
+							<option value="5">Africa</option>
+							<option value="6">Asia</option>
+							<option value="7">Australia</option>
 						</select> <br><br>
 					<br>
 					<br> <input type="submit" class="btn btn-primary" value="Add Beach"/>

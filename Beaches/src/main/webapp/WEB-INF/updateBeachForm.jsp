@@ -23,7 +23,7 @@
 					<label for="description">Description:</label><br> 
 						<input type="text" value="${beach.description}" name="description"> <br> 
 					<label for="rating">Rating on TripAdvisor:</label> <br> 
-						<select type="dropdown" value="${beach.rating}">
+						<select type="dropdown" value="${beach.rating}" name="rating">
 							<option value="1">1</option>
 							<option value="1.5">1.5</option>
 							<option value="2">2</option>
@@ -47,7 +47,7 @@
 					<label for="closestCity">Closest City:</label> <br> 
 						<input type="text" value="${beach.closestCity}" name="closestCity" > <br>
 					<label for="consideredTropical">Is this beach considered to be tropical</label> <br> 
-						<select type="radio" name="consideredTropical" id="radio"> 
+						<select type="dropdown" name="consideredTropical" id="radio"> 
 							<option value="true">Yes</option>
 							<option value="false">No</option>
 						</select> <br><br>
@@ -57,12 +57,8 @@
 						<input type="number" value="${beach.milesToClosestCity}" name="milesToClosestCity"/> <br> 
 					<label for="populationOfClosestCity">Population of the closest city:</label><br> 
 						<input type="number" value="${beach.populationOfClosestCity}"name="populationOfClosestCity"> <br> 
-					<label for="highestTemp">Highest recorded Temperature: </label> <br> 
-						<input type="number" name="highestTemp"> <br> 
-					<label for="lowestTemp">Lowest recorded Temperature: </label> <br> 
-						<input type="number" name="lowestTemp"> <br> 
 					<label for="typeOfGovernment">Type of Government: </label> <br> 
-						<select name="typeOfGovernment" id="radio"> <br> 
+						<select type="dropdown" value="${beach.typeOfGovernment}"name="typeOfGovernment"> <br> 
 							<option value="Democracy">Democracy</option>
 							<option value="Monarchy">Monarchy</option>
 							<option value="Republic">Republic</option>
@@ -70,16 +66,20 @@
 							<option value="Dictatorship">Dictatorship</option>
 						</select> <br><br>
 						
+					<label for="highestTemp">Highest recorded Temperature: </label> <br> 
+						<input type="number" value="${beach.highestTemp}" name="highestTemp"> <br> 
+					<label for="lowestTemp">Lowest recorded Temperature: </label> <br> 
+						<input type="number" value="${beach.lowestTemp}" name="lowestTemp"> <br> 
 					<label for="avgFallTemp">Average Temperature in the fall:</label> <br> 
-						<input type="number" name="avgFallTemp"><br> <br> 
+						<input type="number" value="${beach.avgFallTemp}"name="avgFallTemp"><br> <br> 
 					<label for="avgWinterTemp">Average Temperature in the winter:</label> <br> 
-						<input type="number" name="avgWinterTemp"><br> <br> 		
+						<input type="number" value="${beach.avgWinterTemp}" name="avgWinterTemp"><br> <br> 		
 					<label for="avgSpringTemp">Average Temperature in the spring:</label> <br> 
-						<input type="number" name="avgSpringTemp"><br> <br> 
+						<input type="number" value="${beach.avgSpringTemp}" name="avgSpringTemp"><br> <br> 
 					<label for="avgSummerTemp">Average Temperature in the summer:</label> <br> 
-						<input type="number" name="avgSummerTemp"><br> <br> 
+						<input type="number" value="${beach.avgSummerTemp}" name="avgSummerTemp"><br> <br> 
 					<label for="region">Region:</label>
-						<select name="region" id="dropdown">
+						<select type="dropdown" value="${beach.region}" name="region" id="dropdown">
 							<option value="1">North America</option>
 							<option value="2">South America</option>
 							<option value="3">Europe</option>
@@ -87,8 +87,10 @@
 							<option value="5">Asia</option>
 							<option value="6">Australia</option>
 						</select> <br><br>
+					<label for="image">Add an image URL</label>	
+					<input type="text" value="${beach.image}" name="image"> <br> 
 					<br>
-					<br> <input type="submit" class="btn btn-primary" value="Update Beach Info"/>
+					<br> <input type="submit" class="button1" value="Update Beach Info"/>
 				</form>
 		
 		

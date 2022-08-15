@@ -1,6 +1,7 @@
 package com.skilldistillery.beaches.controllers;
 
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +16,8 @@ public class BeachController {
 
 	@Autowired
 	private BeachDao beachDao;
+	
+	
 
 	@RequestMapping(path={"/","index.do"})
 	public String index(Model model) {
@@ -22,7 +25,12 @@ public class BeachController {
 //  return "WEB-INF/index.jsp";
    return "index"; // if using a ViewResolver.
 }
-
+	
+	@RequestMapping(path="listAll.do")
+	public String listAll(Model model){
+		model.addAttribute("beaches", beachDao.listAll());
+		return "beach/listAll";
+	}
 	@RequestMapping(path = "getBeach.do")
 	public String getBeach(int bid, Model model) {
 		Beach beach = beachDao.findById(bid);
