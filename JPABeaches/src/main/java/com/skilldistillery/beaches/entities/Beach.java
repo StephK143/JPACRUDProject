@@ -73,7 +73,6 @@ public class Beach {
 	public Beach() {
 	}
 
-
 	public int getId() {
 		return id;
 	}
@@ -271,5 +270,4 @@ public class Beach {
 		return builder.toString();
 	}
 
-	
 }

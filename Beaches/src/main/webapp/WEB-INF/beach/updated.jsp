@@ -15,11 +15,29 @@
 
 	<main class="container-fluid">
 
-		<h1 class="prettyTitles" id="centered">Beach Updated Successfully!</h1>
+		<h1  class="prettyHeaders"  id="centered">Beach Updated Successfully!</h1>
 
 
-		<a href="addBeach.do"><button type="button" value="addBeach"
-				class="button1">Add Beach</button></a>
+		<div>
+			<table>
+				<tr>
+					<form>
+						<a href="addBeach.do"><button type="button" value="addBeach"
+								class="button1">Add Beach</button></a>
+					</form>
+					<form action="updateBeach.do" method="GET">
+						<input type="hidden" name="id" value="${beach.id}" /> <input
+							type="submit" value="Update Beach" class="button1" />
+					</form>
+
+					<form action="deleteBeach.do" method="POST">
+						<input type="hidden" name="id" value="${beach.id}" /> <input
+							type="submit" value="Delete Beach" class="button1" />
+					</form>
+
+				</tr>
+			</table>
+		</div>
 
 		<div>
 			<table class="table table-stripe table-hover">

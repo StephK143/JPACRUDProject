@@ -16,9 +16,9 @@
 		<table>
 			<thead>
 				<tr>
-					<h1>Best beaches to live near!</h1>
+					<h1 class="prettyHeaders" >Best beaches to live near!</h1>
 				</tr>
-			</thead>
+			</thead><br><br>
 
 			<form action="getBeach.do" method="GET">
 				Look up beach by id: <input type="text" name="bid" /><input
@@ -35,14 +35,14 @@
 							class="button1">List All Beaches</button></a>
 				</form>
 
-			</tr>
+			</tr><br><br>
 			<tr>
-					<h1>For more details click the beach below</h1>
-				</tr>
+					<h1   class="prettyHeaders"  >Click the beach below for more details </h1>
+				</tr><br><br>
 
 		</table>
 
-		<table class="table table-stripe table-hover">
+			<table class="table table-stripe table-hover">
 			<thead>
 				<tr>
 
@@ -60,7 +60,7 @@
 							<tr>
 
 								<td><a href="getBeach.do?bid=${b.id}">${b.name} </a></td>
-								<td id="textwrap">${b.description}</td>
+								<td>${b.description}</td>
 								<td>${b.closestCity}</td>
 							</tr>
 						</c:forEach>

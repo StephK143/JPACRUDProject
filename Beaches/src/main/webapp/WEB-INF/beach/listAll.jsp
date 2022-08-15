@@ -15,20 +15,36 @@
 
 	<main class="container-fluid">
 
-		<h1>List of all beaches</h1>
 
-		<form action="getBeach.do" method="GET">
-			Look up beach by id: <input type="text" name="bid" /><input
-				type="submit" class="button" value="Show Beach details" />
-		</form>
-		<form>
-		<a href="addBeach.do"><button type="button" value="addBeach"
-				class="button1">Add Beach</button></a>
-		</form>
-		<form>
-		<a href="listAll.do"><button type="button" value="listAll"
-				class="button1">List All Beaches</button></a>
-		</form>
+		<table>
+			<thead>
+				<tr>
+					<h1 class="prettyHeaders" >List of all beaches</h1>
+				</tr>
+			</thead>
+
+			<form action="getBeach.do" method="GET">
+				Look up beach by id: <input type="text" name="bid" /><input
+					type="submit" class="button1" value="Show Beach details" />
+			</form>
+
+			<tr>
+				<form>
+					<a href="addBeach.do"><button type="button" value="addBeach"
+							class="button1">Add Beach</button></a>
+				</form>
+				<form>
+					<a href="listAll.do"><button type="button" value="listAll"
+							class="button1">List All Beaches</button></a>
+				</form>
+
+			</tr>
+			<tr>
+					<h1   class="prettyHeaders"  >For more details click the beach below</h1>
+				</tr>
+
+		</table>
+				
 
 		
 		<table class="table table-stripe table-hover">

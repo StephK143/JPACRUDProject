@@ -15,8 +15,8 @@
 
 
 
-				<h2 class="forms">Add your favorite beach:</h2>
-				<form action="beachAdded.do" method="POST">
+				<h2  class="prettyHeaders" >Add your favorite beach:</h2>
+				<form action="beachAdded.do" method="POST" id="forms">
 			
 					<label for="name">Name of Beach:</label><br>
 						<input type="text" name="name" required /> <br> 
@@ -87,7 +87,7 @@
 							<option value="7">Australia</option>
 						</select> <br><br>
 					<br>
-					<br> <input type="submit" class="btn btn-primary" value="Add Beach"/>
+					<br> <input type="submit" class="button1" value="Add Beach"/>
 				</form>
 		
 		

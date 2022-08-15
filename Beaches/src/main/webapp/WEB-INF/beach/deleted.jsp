@@ -15,46 +15,33 @@
 
 	<main class="container-fluid" id="main">
 
-		<h1>Beach Deleted Successfully!</h1>
 
-		<form action="getBeach.do" method="GET">
-			Beach Id: <input type="text" name="bid" /><input type="submit"
-				class="btn btn-primary" value="Show Beach details" />
-		</form>
-		<a href="addBeach.do"><button type="button" value="addBeach"
-				class="btn btn-primary">Add Beach</button></a>
-
-
-		<table class="table table-stripe table-hover">
+		<table>
 			<thead>
 				<tr>
-					<th>ID</th>
-					<th>Name</th>
-					<th>Description</th>
-					<th>Closest City</th>
+					<h1 class="prettyHeaders">Beach Deleted Successfully!</h1>
 				</tr>
-			</thead>
+			</thead><br><br>
 
-			<tbody>
-				<c:choose>
-					<c:when test="${not empty beaches}">
-						<c:forEach var="b" items="${beaches }">
+			<form action="getBeach.do" method="GET">
+				Look up beach by id: <input type="text" name="bid" /><input
+					type="submit" class="button1" value="Show Beach details" />
+			</form>
 
-							<tr>
-								<td>${b.id }</td>
-								<td><a href="getBeach.do?bid=${b.id}">${b.name} </a></td>
-								<td>${b.description}</td>
-								<td>${b.closestCity}</td>
-							</tr>
-						</c:forEach>
+			<tr>
+				<form>
+					<a href="addBeach.do"><button type="button" value="addBeach"
+							class="button1">Add Beach</button></a>
+				</form>
+				<form>
+					<a href="listAll.do"><button type="button" value="listAll"
+							class="button1">List All Beaches</button></a>
+				</form>
 
-					</c:when>
-				</c:choose>
-			</tbody>
+			</tr>
+
 
 		</table>
-
-
 	</main>
 	<jsp:include page="../bootstrapFoot.jsp" />
 </body>
