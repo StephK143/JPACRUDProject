@@ -45,7 +45,7 @@ class BeachTest {
 	@Test
 	void test_Beach_entity_mapping() {
 		assertNotNull(beach);
-		assertEquals("Siesta Key Beach", beach.getName());
+		assertEquals("Panama City Beach", beach.getName());
 	}
 
 }

@@ -37,6 +37,7 @@
 						<td>${beach.rating}</td>
 						<td>${beach.sandColor}</td>
 						<td>${beach.consideredTropical}</td>
+						<td>${beach.image}</td>
 
 					</tr>
 

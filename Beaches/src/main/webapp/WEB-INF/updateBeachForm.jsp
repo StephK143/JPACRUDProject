@@ -102,9 +102,10 @@
 				<option value="4">Africa</option>
 				<option value="5">Asia</option>
 				<option value="6">Australia</option>
-			</select> <br> <br> <label for="image">Add an image URL</label> <input
-				type="text" value="${beach.image}" name="image"> <br> <br>
-			<br> <input type="submit" class="button1"
+			</select> <br> <br> 
+ 
+			
+			<input type="submit" class="button1"
 				value="Update Beach Info" />
 		</form>
 

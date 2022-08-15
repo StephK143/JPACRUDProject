@@ -9,23 +9,25 @@
 <jsp:include page="bootstrapHead.jsp" />
 </head>
 
-<body >
+<body>
 
 	<jsp:include page="navbar.jsp" />
-<main>
+	<main>
 		<table>
 			<thead>
 				<tr>
-					<h1 class="prettyHeaders" >Best beaches to live near!</h1>
+					<h1 class="prettyHeaders">Best beaches to live near!</h1>
 				</tr>
-			</thead><br><br>
-
-			<form action="getBeach.do" method="GET">
-				Look up beach by id: <input type="text" name="bid" /><input
-					type="submit" class="button1" value="Show Beach details" />
-			</form>
-
+			</thead>
+			<br>
+			<br>
 			<tr>
+				<form action="getBeach.do" method="GET">
+					Look up beach by id: <input type="text" name="bid" /><input
+						type="submit" class="button1" value="Show Beach details" />
+				</form>
+
+
 				<form>
 					<a href="addBeach.do"><button type="button" value="addBeach"
 							class="button1">Add Beach</button></a>
@@ -34,18 +36,23 @@
 					<a href="listAll.do"><button type="button" value="listAll"
 							class="button1">List All Beaches</button></a>
 				</form>
+			</tr>
 
-			</tr><br><br>
+			<br>
+			<br>
 			<tr>
-					<h1   class="prettyHeaders"  >Click the beach below for more details </h1>
-				</tr><br><br>
+				<h1 class="prettyHeaders">Click the beach below for more
+					details</h1>
+			</tr>
+			<br>
+			<br>
 
 		</table>
 
-			<table class="table table-stripe table-hover">
+		<table class="table table-stripe table-hover">
 			<thead>
 				<tr>
-
+					<th></th>
 					<th>Name</th>
 					<th>Description</th>
 					<th>Closest City</th>
@@ -59,6 +66,7 @@
 
 							<tr>
 
+								
 								<td><a href="getBeach.do?bid=${b.id}">${b.name} </a></td>
 								<td>${b.description}</td>
 								<td>${b.closestCity}</td>
@@ -71,9 +79,9 @@
 
 		</table>
 
-</main>
+	</main>
 
-	
+
 	<jsp:include page="bootstrapFoot.jsp" />
 </body>
 </html>
